@@ -12,9 +12,11 @@ import { MatFormFieldModule, MatFormFieldControl,  } from '@angular/material/for
 import { Routes, RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [
   { path: 'searchprovinces', component: SearchProvincesComponent },
+  { path: 'result', component: ResultComponent },
 ];
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
+    MatCardModule,
 
 
 
