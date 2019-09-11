@@ -8,7 +8,14 @@ import { ResultComponent } from './result/result.component';
 import { SearchProvincesComponent } from './search-provinces/search-provinces.component';
 import { MapComponent } from './map/map.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MatFormFieldControl,  } from '@angular/material/form-field';
+import { Routes, RouterModule } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+const routes: Routes = [
+  { path: 'searchprovinces', component: SearchProvincesComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +29,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatAutocompleteModule,
     MatFormFieldModule,
+    MatInputModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
+
 
 
   ],

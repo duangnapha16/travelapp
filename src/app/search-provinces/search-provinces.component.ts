@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { State } from '../models/search-province';
@@ -12,7 +12,7 @@ import { State } from '../models/search-province';
 export class SearchProvincesComponent implements OnInit {
   stateCtrl = new FormControl();
   filteredStates: Observable<State[]>;
-
+  searchProvinces: FormGroup;
   states: State[] = [
     {
       name: 'Arkansas',
