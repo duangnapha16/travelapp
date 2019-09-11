@@ -13,10 +13,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { AgmCoreModule } from '@agm/core';
 
 const routes: Routes = [
   { path: 'searchprovinces', component: SearchProvincesComponent },
   { path: 'result', component: ResultComponent },
+  { path: 'map', component: MapComponent },
 ];
 @NgModule({
   declarations: [
@@ -36,6 +38,10 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAzSnXXXXXXXXXXXXXXXXXSZGGWU',
+      libraries: ['places']
+    }),
 
 
 

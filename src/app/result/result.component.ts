@@ -11,7 +11,7 @@ export class ResultComponent implements OnInit {
   states: Attractions[] = [
     {
       nameAttractions: 'นครนายก',
-      detail: '',
+      detail: '  ',
     },
     {
       nameAttractions: 'ตาก',
