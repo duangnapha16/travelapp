@@ -9,7 +9,6 @@
     {
       "id": 2,
       "name": "ตาก"
-      
     },
     {
       "id": 3,
@@ -36,8 +35,39 @@
     {
       "id": 1,
       "name": "นครนายก",
+      "loaction": {
+        "loc1": {
+          "name": "",
+          "detail": "",
+          "lat": "",
+          "long": ""
+        },
+        "loc2": {
+          "name": "",
+          "detail": "",
+          "lat": "",
+          "long": ""
+        },
+        "loc3": {
+          "name": "",
+          "detail": "",
+          "lat": "",
+          "long": ""
+        },
+        "loc4": {
+          "name": "",
+          "detail": "",
+          "lat": "",
+          "long": ""
+        }
+      },
       "long": 14.237200,
-      "lat": 101.209390
+      "lat": 101.209390,
+      "img": {
+        "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
+        "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P3.jpg"
+      },
+      "detail": ""
     },
     {
       "id": 2,
