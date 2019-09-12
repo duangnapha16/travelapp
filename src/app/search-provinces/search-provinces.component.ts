@@ -14,36 +14,15 @@ export class SearchProvincesComponent implements OnInit {
   stateCtrl = new FormControl();
   filteredStates: Observable<State[]>;
   searchProvinces: FormGroup;
-  states: State[] = [
-    {
-      name: 'นครนายก',
-    },
-    {
-      name: 'ตาก',
-    },
-    {
-      name: '่ระนอง',
-    },
-    {
-      name: 'ปราจีนบุรี',
-    },
-    {
-      name: 'บึงกาฬ',
-    },
-    {
-      name: 'พัทลุง',
-    },
-    {
-      name: 'สุพรรณบุรี',
-    }
-  ];
+  states: any;
+  getState: any;
 
   constructor(private http: HttpClient) {
-    //other
+    // other
     this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        map(state => state ? this._filterStates(state) : this.states.slice())
+        map(state => state ? this._filterStates(state) : this.getState.slice())
       );
   }
 
