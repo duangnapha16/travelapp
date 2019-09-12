@@ -3,7 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { State } from '../models/search/search-province.model';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-search-provinces',
@@ -38,7 +38,8 @@ export class SearchProvincesComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  constructor(private http: HttpClient) {
+    //other
     this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
@@ -47,6 +48,9 @@ export class SearchProvincesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.http.get('https://jsonplaceholder.typicode.com').subscribe(data => {
+      console.log(data);
+    });
   }
 
   private _filterStates(value: string): State[] {
