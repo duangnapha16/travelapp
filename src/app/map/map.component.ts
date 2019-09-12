@@ -1,6 +1,9 @@
 import { Component, OnInit, NgZone, ElementRef, ViewChild } from '@angular/core';
 import { MapsAPILoader, MouseEvent } from '@agm/core';
-
+import { HttpClient } from '@angular/common/http';
+import { SearchProvincesService } from '../service/search-provinces.service';
+import { AttractionsService } from '../service/attractions.service';
+import { State } from '../models/search/search-province.model';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -14,16 +17,22 @@ export class MapComponent implements OnInit {
   address: string;
   private geoCoder;
 
+
+  //getData Form Db.josn
+  states;
   @ViewChild('search', { static: false })
   public searchElementRef: ElementRef;
 
   constructor(
     private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private http: HttpClient,
+    private service: SearchProvincesService,
+    private attraction: AttractionsService
   ) { }
 
   ngOnInit() {
-    // this.setCurrentLocation();
+    this.setCurrentLocation();
 
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
@@ -50,6 +59,15 @@ export class MapComponent implements OnInit {
         });
       });
     });
+
+    this.service.getCoordinates().subscribe(data => {
+      console.log('data', data);
+      this.states = data;
+
+    });
+
+
+
   }
 
   private setCurrentLocation() {
@@ -58,7 +76,7 @@ export class MapComponent implements OnInit {
         // this.latitude = 14.2524816;
         // this.longitude = 100.73233319999997;
         this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;  
+        this.longitude = position.coords.longitude;
         this.zoom = 15;
       });
     }
@@ -75,8 +93,8 @@ export class MapComponent implements OnInit {
   getAddress(latitude, longitude) {
     // tslint:disable-next-line: object-literal-key-quotes
     this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
-      console.log('results',results);
-      console.log('status)',status);
+      console.log('results', results);
+      console.log('status)', status);
       if (status === 'OK') {
         if (results[0]) {
           this.zoom = 12;

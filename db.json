@@ -3,52 +3,52 @@
     {
       "id": 1,
       "name": "นครนายก",
-      "long": 14.237200,
-      "lat": 101.209390
+      "lat": 14.237200,
+      "long": 101.209390
     },
     {
       "id": 2,
       "name": "ตาก",
-      "long": 16.528963,
-      "lat": 98.615624
+      "lat": 16.528963,
+      "long": 98.615624
     },
     {
       "id": 3,
       "name": "ระนอง",
-      "long": 10.047098,
-      "lat": 98.643186
+      "lat": 10.047098,
+      "long": 98.643186
     },
     {
       "id": 4,
       "name": "ปราจีนบุรี",
-      "long": 14.022859,
-      "lat": 101.621766
+      "lat": 14.022859,
+      "long": 101.621766
     },
     {
       "id": 5,
       "name": "บึงกาฬ",
-      "long": 18.109511,
-      "lat": 103.716414
+      "lat": 18.109511,
+      "long": 103.716414
     },
     {
       "id": 6,
       "name": "พัทลุง",
-      "long": 7.492417,
-      "lat": 100.080616
+      "lat": 7.492417,
+      "long": 100.080616
     },
     {
       "id": 7,
       "name": "สุพรรณบุรี",
-      "long": 14.570087,
-      "lat": 99.782316
+      "lat": 14.570087,
+      "long": 99.782316
     }
   ],
   "coordinates": [
     {
       "id": 1,
       "name": "นครนายก",
-      "long": 14.237200,
-      "lat": 101.209390,
+      "lat": 14.237200,
+      "long": 101.209390,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -57,8 +57,8 @@
         "loc1": {
           "name": "this is jsodsfn",
           "detail": "11111111111",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -69,8 +69,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -81,8 +81,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "22222222222222222222this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -93,8 +93,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "t33333333333his is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -107,8 +107,8 @@
     {
       "id": 2,
       "name": "ตาก",
-      "long": 16.528963,
-      "lat": 98.615624,
+      "lat": 16.528963,
+      "long": 98.615624,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -117,8 +117,8 @@
         "loc1": {
           "name": "this is json",
           "detail": "this44444444444444444 is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -129,8 +129,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this555555555555555555 is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -141,8 +141,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "this is6666666666 json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -153,8 +153,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -167,8 +167,8 @@
     {
       "id": 3,
       "name": "ระนอง",
-      "long": 10.0470980,
-      "lat": 98.643186,
+      "lat": 10.0470980,
+      "long": 98.643186,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -177,8 +177,8 @@
         "loc1": {
           "name": "this is json",
           "detail": "t7777777777his is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -189,8 +189,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -201,8 +201,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -213,8 +213,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -227,8 +227,8 @@
     {
       "id": 4,
       "name": "ปราจีนบุรี",
-      "long": 14.022859,
-      "lat": 101.621766,
+      "lat": 14.022859,
+      "long": 101.621766,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -237,8 +237,8 @@
         "loc1": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -249,8 +249,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -261,8 +261,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -273,8 +273,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -287,8 +287,8 @@
     {
       "id": 5,
       "name": "บึงกาฬ",
-      "long": 18.109511,
-      "lat": 103.716414,
+      "lat": 18.109511,
+      "long": 103.716414,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -297,8 +297,8 @@
         "loc1": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -309,8 +309,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -321,8 +321,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -333,8 +333,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -347,8 +347,8 @@
     {
       "id": 6,
       "name": "พัทลุง",
-      "long": 7.492417,
-      "lat": 100.080616,
+      "lat": 7.492417,
+      "long": 100.080616,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -357,8 +357,8 @@
         "loc1": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -369,8 +369,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -381,8 +381,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -393,8 +393,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -407,8 +407,8 @@
     {
       "id": 7,
       "name": "สุพรรณบุรี",
-      "long": 14.570087,
-      "lat": 99.782316,
+      "lat": 14.570087,
+      "long": 99.782316,
       "img": {
         "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg"
       },
@@ -417,8 +417,8 @@
         "loc1": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -429,8 +429,8 @@
         "loc2": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -441,8 +441,8 @@
         "loc3": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
@@ -453,8 +453,8 @@
         "loc4": {
           "name": "this is json",
           "detail": "this is json",
-          "lat": "this is json",
           "long": "this is json",
+          "lat": "this is json",
           "img": {
             "img1": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",
             "img2": "https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg",

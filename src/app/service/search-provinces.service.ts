@@ -15,4 +15,8 @@ export class SearchProvincesService {
     const url = `http://localhost:3000/states`;
     return this.http.get(url).pipe();
   }
+  getCoordinates() {
+    const url = `http://localhost:3000/states`;
+    return this.http.get(url).pipe();
+}
 }
