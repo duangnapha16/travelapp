@@ -1,11 +1,41 @@
+<!--
+
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header"></div>
-    <mat-card-title>{{ attractions[0].place[0].name }}</mat-card-title>
-    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    <mat-card-title>{{ coordinates.name }}</mat-card-title>
+
   </mat-card-header>
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>{{ attractions[0].place[0].detail }} </p>
+  <mat-card-content *ngFor="let data of coordinates">
+    <p>{{ data.detail }} </p>
+    <p>{{ data.location }} </p>
   </mat-card-content>
 </mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header"></div>
+    <mat-card-title>{{ coordinates.name }}</mat-card-title>
+
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content *ngFor="let data of coordinates">
+    <p>{{ data.detail }} </p>
+    <p>{{ data.location }} </p>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header"></div>
+    <mat-card-title>{{ coordinates.name }}</mat-card-title>
+
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content *ngFor="let data of coordinates">
+    <p>{{ data.detail }} </p>
+    <p>{{ data.location }} </p>
+  </mat-card-content>
+</mat-card> -->

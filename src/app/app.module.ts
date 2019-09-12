@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   { path: 'searchprovinces', component: SearchProvincesComponent },
@@ -46,6 +46,7 @@ const routes: Routes = [
       apiKey: 'AIzaSyAzSnXXXXXXXXXXXXXXXXXSZGGWU',
       libraries: ['places']
     }),
+    MatButtonModule,
 
 
 
