@@ -11,7 +11,7 @@ export class SearchProvincesService {
   constructor(private http: HttpClient, ) { }
 
   getState(): Observable<any> {
-    const url = `http://localhost:3000/api/state?`;
+    const url = `http://localhost:3000/states`;
     return this.http.get(url).pipe();
   }
 }

@@ -28,7 +28,7 @@ const routes: Routes = [
     ResultComponent,
     SearchProvincesComponent,
     MapComponent,
-    HttpClientModule
+
   ],
   imports: [
     BrowserModule,
@@ -41,6 +41,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAzSnXXXXXXXXXXXXXXXXXSZGGWU',
       libraries: ['places']

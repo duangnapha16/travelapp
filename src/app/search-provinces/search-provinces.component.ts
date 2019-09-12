@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { State } from '../models/search/search-province.model';
 import { HttpClient } from '@angular/common/http';
+import { SearchProvincesService } from '../service/search-provinces.service';
 
 @Component({
   selector: 'app-search-provinces',
@@ -17,19 +18,25 @@ export class SearchProvincesComponent implements OnInit {
   states: any;
   getState: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private service: SearchProvincesService) {
+
+
+
     // other
     this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        map(state => state ? this._filterStates(state) : this.getState.slice())
+        map(state => state ? this._filterStates(state) : this.states.slice())
       );
   }
 
   ngOnInit() {
-    this.http.get('https://jsonplaceholder.typicode.com').subscribe(data => {
-      console.log(data);
-    });
+    // this.http.get('https://jsonplaceholder.typicode.com').subscribe(data => {
+    //   console.log(data);
+    // });
+
+    this.service.getState().subscribe( data => this.filteredStates = data );
   }
 
   private _filterStates(value: string): State[] {
