@@ -28,9 +28,13 @@ const routes: Routes = [
     ResultComponent,
     SearchProvincesComponent,
     MapComponent,
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -43,8 +47,8 @@ const routes: Routes = [
     MatCardModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAzSnXXXXXXXXXXXXXXXXXSZGGWU',
-      libraries: ['places']
+      apiKey: 'AIzaSyD7vq-yq_csTGNqXl-XtJ8OJKXsl4Akq9c',
+      // libraries: ['places']
     }),
     MatButtonModule,
 
