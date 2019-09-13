@@ -1,68 +1,86 @@
-<form class="example-form" >
+<form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="State" aria-label="State"
-    [matAutocomplete]="auto"
-    [formControl]="stateCtrl">
+    <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
         <span>{{state.name}}</span>
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-  </form>
+
+</form>
 <div class="example-button-row">
-  <button mat-raised-button color="primary" (click)="onClickSearchButton()" >Search</button>
+  <button mat-raised-button color="primary" (click)="onClickSearchButton()">Search</button>
 </div>
+
+<div class="container">
+  <div>latitude: {{latitude}}</div>
+  <div>longitude: {{longitude}}</div>
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+    <div *ngFor="let data of states2">
+      <agm-marker [latitude]="data.lat" [longitude]="data.long" [markerDraggable]="true"
+        (dragEnd)="markerDragEnd($event)"></agm-marker>
+
+      <div>long/lat: {{ data.long }} / {{data.lat}}</div>
+    </div>
+  </agm-map>
+</div>
+
+
+
+
+<app-map></app-map>
+
 
 <div *ngFor="let data of attractionList">
 
   <mat-card class="example-card">
     <mat-card-header>
-    <div mat-card-avatar class="example-header"></div>
-    <mat-card-title   >{{ data.location.loc1.name }}</mat-card-title>
+      <div mat-card-avatar class="example-header"></div>
+      <mat-card-title>{{ data.location.loc1.name }}</mat-card-title>
 
-  </mat-card-header>
-  <img mat-card-image src = {{data.location.loc1.img.img1}} alt="Photo of a Shiba Inu">
-  <!-- <img mat-card-image src="https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg" alt="Photo of a Shiba Inu"> -->
-  <mat-card-content >
-    <p>{{ data.location.loc1.detail }} </p>
-  </mat-card-content>
-</mat-card>
+    </mat-card-header>
+    <img mat-card-image src={{data.location.loc1.img.img1}} alt="Photo of a Shiba Inu">
+    <!-- <img mat-card-image src="https://img.kapook.com/u/2019/sireeporn/travel-9/P2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+      <p>{{ data.location.loc1.detail }} </p>
+    </mat-card-content>
+  </mat-card>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header"></div>
-    <mat-card-title>{{ data.location.loc2.name }}</mat-card-title>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header"></div>
+      <mat-card-title>{{ data.location.loc2.name }}</mat-card-title>
 
-  </mat-card-header>
-  <img mat-card-image src="{{data.location.loc1.img.img2}}" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>{{ data.location.loc2.detail }} </p>
-  </mat-card-content>
-</mat-card>
+    </mat-card-header>
+    <img mat-card-image src="{{data.location.loc1.img.img2}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{ data.location.loc2.detail }} </p>
+    </mat-card-content>
+  </mat-card>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header"></div>
-    <mat-card-title>{{ data.location.loc3.name }}</mat-card-title>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header"></div>
+      <mat-card-title>{{ data.location.loc3.name }}</mat-card-title>
 
-  </mat-card-header>
-  <img mat-card-image src="{{data.location.loc1.img.img3}}" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>{{ data.location.loc3.detail }} </p>
-  </mat-card-content>
-</mat-card>
+    </mat-card-header>
+    <img mat-card-image src="{{data.location.loc1.img.img3}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{ data.location.loc3.detail }} </p>
+    </mat-card-content>
+  </mat-card>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header"></div>
-    <mat-card-title>{{ data.location.loc4.name }}</mat-card-title>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header"></div>
+      <mat-card-title>{{ data.location.loc4.name }}</mat-card-title>
 
-  </mat-card-header>
-  <img mat-card-image src="{{data.location.loc1.img.img1}}" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>{{ data.location.loc4.detail }} </p>
-  </mat-card-content>
-</mat-card>
+    </mat-card-header>
+    <img mat-card-image src="{{data.location.loc1.img.img1}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{ data.location.loc4.detail }} </p>
+    </mat-card-content>
+  </mat-card>
 
 </div>
