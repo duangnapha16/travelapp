@@ -28,7 +28,7 @@ const routes: Routes = [
     ResultComponent,
     SearchProvincesComponent,
     MapComponent,
- ],
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
