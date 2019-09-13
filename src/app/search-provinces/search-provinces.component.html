@@ -1,4 +1,7 @@
+<h1>ท่องเที่ยวเมืองรอง</h1>
+
 <form class="example-form">
+  <div class="control">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
     <mat-autocomplete #auto="matAutocomplete">
@@ -8,13 +11,11 @@
     </mat-autocomplete>
   </mat-form-field>
 
-
-
-</form>
-
-<div class="example-button-row">
-  <button mat-raised-button color="primary" (click)="onClickSearchButton()">Search</button>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="onClickSearchButton()">Search</button>
+  </div>
 </div>
+</form>
 
 
 
@@ -33,7 +34,7 @@
 
     </agm-map>
   </div>
-
+ <div class="cardGroup">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header"></div>
@@ -53,19 +54,20 @@
       <mat-card-title>{{ data.location.loc2.name }}</mat-card-title>
 
     </mat-card-header>
-    <img mat-card-image src="{{data.location.loc1.img.img2}}" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="{{data.location.loc2.img.img1}}" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>{{ data.location.loc2.detail }} </p>
     </mat-card-content>
   </mat-card>
-
+ </div>
+<div class="cardGroup">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header"></div>
       <mat-card-title>{{ data.location.loc3.name }}</mat-card-title>
 
     </mat-card-header>
-    <img mat-card-image src="{{data.location.loc1.img.img3}}" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="{{data.location.loc3.img.img1}}" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>{{ data.location.loc3.detail }} </p>
     </mat-card-content>
@@ -77,10 +79,10 @@
       <mat-card-title>{{ data.location.loc4.name }}</mat-card-title>
 
     </mat-card-header>
-    <img mat-card-image src="{{data.location.loc1.img.img1}}" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="{{data.location.loc4.img.img1}}" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>{{ data.location.loc4.detail }} </p>
     </mat-card-content>
   </mat-card>
-
+</div>
 </div>
