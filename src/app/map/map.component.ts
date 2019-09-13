@@ -18,7 +18,7 @@ export class MapComponent implements OnInit {
   private geoCoder;
 
 
-  //getData Form Db.josn
+  // getData Form Db.josn
   states;
   @ViewChild('search', { static: false })
   public searchElementRef: ElementRef;
@@ -84,11 +84,11 @@ export class MapComponent implements OnInit {
     this.latitude = $event.coords.lat;
     this.longitude = $event.coords.lng;
     this.getAddress(this.latitude, this.longitude);
-  };
+  }
 
 
   getAddress(latitude, longitude) {
-    this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
+    this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
       console.log('results', results);
       console.log('status)', status);
       if (status === 'OK') {
@@ -104,6 +104,6 @@ export class MapComponent implements OnInit {
     });
   }
 
-  
+
 }
 

@@ -25,7 +25,7 @@ export class SearchProvincesComponent implements OnInit {
   selected: any;
   attractionList;
 
-  //map
+  // map
   title = 'AGM project';
   latitude: number;
   longitude: number;
@@ -35,10 +35,10 @@ export class SearchProvincesComponent implements OnInit {
   @ViewChild('search', { static: false })
   public searchElementRef: ElementRef;
   constructor(private http: HttpClient,
-    private service: SearchProvincesService,
-    private attraction: AttractionsService,
-    private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone) {
+              private service: SearchProvincesService,
+              private attraction: AttractionsService,
+              private mapsAPILoader: MapsAPILoader,
+              private ngZone: NgZone) {
   }
 
   // ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
@@ -58,9 +58,10 @@ export class SearchProvincesComponent implements OnInit {
 
     });
 
-    //map
+    // map
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
+      // tslint:disable-next-line: new-parens
       this.geoCoder = new google.maps.Geocoder;
       // const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
       //   types: ['address']
@@ -113,7 +114,7 @@ export class SearchProvincesComponent implements OnInit {
     });
 
   }
-  //map
+  // map
   private setCurrentLocation() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -129,11 +130,11 @@ export class SearchProvincesComponent implements OnInit {
     this.latitude = $event.coords.lat;
     this.longitude = $event.coords.lng;
     this.getAddress(this.latitude, this.longitude);
-  };
+  }
 
 
   getAddress(latitude, longitude) {
-    this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
+    this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
       console.log('results', results);
       console.log('status)', status);
       if (status === 'OK') {
