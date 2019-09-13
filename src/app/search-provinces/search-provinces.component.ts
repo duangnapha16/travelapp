@@ -20,7 +20,7 @@ export class SearchProvincesComponent implements OnInit {
   filteredStates: Observable<any>;
   searchProvinces: FormGroup;
   states: State[] = [];
-  states2: any[];
+  states2;
   getState: any;
   selected: any;
   attractionList;
