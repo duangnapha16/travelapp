@@ -37,25 +37,25 @@ export class MapComponent implements OnInit {
       // tslint:disable-next-line: new-parens
       this.geoCoder = new google.maps.Geocoder;
 
-      // const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-      //   types: ['address']
-      // });
-      // autocomplete.addListener('place_changed', () => {
-      //   this.ngZone.run(() => {
-      //     // get the place result
-      //     const place: google.maps.places.PlaceResult = autocomplete.getPlace();
+      const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+        types: ['address']
+      });
+      autocomplete.addListener('place_changed', () => {
+        this.ngZone.run(() => {
+          // get the place result
+          const place: google.maps.places.PlaceResult = autocomplete.getPlace();
 
-      //     // verify result
-      //     if (place.geometry === undefined || place.geometry === null) {
-      //       return;
-      //     }
+          // verify result
+          if (place.geometry === undefined || place.geometry === null) {
+            return;
+          }
 
-      //     // set latitude, longitude and zoom
-      //     this.latitude = place.geometry.location.lat();
-      //     this.longitude = place.geometry.location.lng();
-      //     this.zoom = 12;
-      //   });
-      // });
+          // set latitude, longitude and zoom
+          this.latitude = place.geometry.location.lat();
+          this.longitude = place.geometry.location.lng();
+          this.zoom = 12;
+        });
+      });
     });
 
     this.service.getCoordinates().subscribe(data => {
@@ -88,7 +88,8 @@ export class MapComponent implements OnInit {
 
 
   getAddress(latitude, longitude) {
-    this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
+    // tslint:disable-next-line: object-literal-key-quotes
+    this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
       console.log('results', results);
       console.log('status)', status);
       if (status === 'OK') {
