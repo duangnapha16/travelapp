@@ -8,7 +8,10 @@
     </mat-autocomplete>
   </mat-form-field>
 
+
+
 </form>
+
 <div class="example-button-row">
   <button mat-raised-button color="primary" (click)="onClickSearchButton()">Search</button>
 </div>
@@ -16,20 +19,17 @@
 <div class="container">
   <div>latitude: {{latitude}}</div>
   <div>longitude: {{longitude}}</div>
-  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
-    <div *ngFor="let data of states2">
+  <div *ngFor="let data of states2">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
       <agm-marker [latitude]="data.lat" [longitude]="data.long" [markerDraggable]="true"
         (dragEnd)="markerDragEnd($event)"></agm-marker>
-
-      <div>long/lat: {{ data.long }} / {{data.lat}}</div>
-    </div>
-  </agm-map>
+    </agm-map>
+    <div>name: {{ data.name }}</div>
+    <div>long/lat: {{ data.long }} / {{data.lat}}</div>
+  </div>
 </div>
 
 
-
-
-<app-map></app-map>
 
 
 <div *ngFor="let data of attractionList">
