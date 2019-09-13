@@ -28,11 +28,7 @@ const routes: Routes = [
     ResultComponent,
     SearchProvincesComponent,
     MapComponent,
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-  ],
+ ],
   imports: [
     HttpClientModule,
     BrowserModule,
