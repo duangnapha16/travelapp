@@ -27,7 +27,7 @@
     <div>latitude: {{latitude}}</div>
     <agm-map [latitude]="data.lat" [longitude]="data.long" [zoom]="zoom">
       <!-- <div *ngFor="let data of states2"> -->
-      <agm-marker [latitude]="data.lat" [longitude]="data.long" [markerDraggable]="true"
+      <agm-marker [label]=data.name [latitude]="data.lat" [longitude]="data.long" [markerDraggable]="true"
         (dragEnd)="markerDragEnd($event)"></agm-marker>
       <!-- </div> -->
 
