@@ -16,7 +16,7 @@
   </div>
 </form>
 
-<div *ngIf="hideMap">
+<div class="map" *ngIf="hideMap">
   <agm-map [latitude]="14.237200" [longitude]="101.209390" [zoom]="6">
     <agm-marker *ngFor="let data of filteredStates | async" [label]=data.name [latitude]="data.lat"
       [longitude]="data.long" [markerDraggable]="false" (dragEnd)="markerDragEnd($event)"></agm-marker>
@@ -26,7 +26,7 @@
 
 
 <div *ngFor="let data of attractionList">
-
+  <div class="map">
     <agm-map [latitude]="data.lat" [longitude]="data.long" [zoom]="zoom">
       <agm-marker [label]=data.name [latitude]="data.lat" [longitude]="data.long" [markerDraggable]="true"
         (dragEnd)="markerDragEnd($event)"></agm-marker>
@@ -39,6 +39,7 @@
         <agm-marker [label]=data.location.loc4.name [latitude]="data.location.loc4.lat" [longitude]="data.location.loc4.long"
           [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
     </agm-map>
+  </div>
 
   <div class="cardGroup">
     <mat-card class="example-card">
