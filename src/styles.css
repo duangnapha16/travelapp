@@ -4,4 +4,10 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: 'Prompt';
+  background-image: url(https://api.beecard.net/api/attachments/files/download/DO3NiBgqTo3jnUr9pbT8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
  }
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: white;
+}

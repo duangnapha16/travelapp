@@ -1,45 +1,50 @@
-<h1>ท่องเที่ยวเมืองรอง</h1>
+<!-- <h1>ท่องเที่ยวเมืองรอง</h1> -->
 
 <form class="example-form">
   <div class="control">
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+      <input matInput placeholder="Provinces" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
       <mat-autocomplete #auto="matAutocomplete">
         <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
           <span>{{state.name}}</span>
         </mat-option>
       </mat-autocomplete>
+      <button mat-button  matSuffix mat-icon-button (click)="onClickSearchButton()">
+        <mat-icon><img class="icon" src="https://image.flaticon.com/icons/svg/527/527484.svg"></mat-icon>
+      </button>
     </mat-form-field>
-
-    <div class="example-button-row">
-      <button mat-raised-button color="primary" (click)="onClickSearchButton()">Search</button>
-    </div>
   </div>
 </form>
 
 <div *ngIf="hideMap">
   <agm-map [latitude]="14.237200" [longitude]="101.209390" [zoom]="6">
     <agm-marker *ngFor="let data of filteredStates | async" [label]=data.name [latitude]="data.lat"
-      [longitude]="data.long" [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
+      [longitude]="data.long" [markerDraggable]="false" (dragEnd)="markerDragEnd($event)"></agm-marker>
   </agm-map>
 </div>
 
 
 
 <div *ngFor="let data of attractionList">
-  <div class="container">
+
     <agm-map [latitude]="data.lat" [longitude]="data.long" [zoom]="zoom">
       <agm-marker [label]=data.name [latitude]="data.lat" [longitude]="data.long" [markerDraggable]="true"
         (dragEnd)="markerDragEnd($event)"></agm-marker>
+        <agm-marker [label]=data.location.loc1.name [latitude]="data.location.loc1.lat" [longitude]="data.location.loc1.long"
+          [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
+        <agm-marker [label]=data.location.loc2.name [latitude]="data.location.loc2.lat" [longitude]="data.location.loc2.long"
+          [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
+        <agm-marker [label]=data.location.loc3.name [latitude]="data.location.loc3.lat" [longitude]="data.location.loc3.long"
+          [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
+        <agm-marker [label]=data.location.loc4.name [latitude]="data.location.loc4.lat" [longitude]="data.location.loc4.long"
+          [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
     </agm-map>
-  </div>
 
   <div class="cardGroup">
     <mat-card class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header"></div>
-        <mat-card-title>{{ data.location.loc1.name }}</mat-card-title>
-
+        <div  class="example-header"></div>
+        <mat-card-title (click)="onClickTitle()">{{ data.location.loc1.name }}</mat-card-title>
       </mat-card-header>
       <img mat-card-image src={{data.location.loc1.img.img1}} alt="Photo of a Shiba Inu">
       <mat-card-content>
@@ -49,7 +54,7 @@
 
     <mat-card class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header"></div>
+        <div  class="example-header"></div>
         <mat-card-title>{{ data.location.loc2.name }}</mat-card-title>
 
       </mat-card-header>
@@ -58,11 +63,11 @@
         <p>{{ data.location.loc2.detail }} </p>
       </mat-card-content>
     </mat-card>
-  </div>
-  <div class="cardGroup">
+  <!-- </div> -->
+  <!-- <div class="cardGroup"> -->
     <mat-card class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header"></div>
+        <div  class="example-header"></div>
         <mat-card-title>{{ data.location.loc3.name }}</mat-card-title>
 
       </mat-card-header>
@@ -74,7 +79,7 @@
 
     <mat-card class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header"></div>
+        <div  class="example-header"></div>
         <mat-card-title>{{ data.location.loc4.name }}</mat-card-title>
 
       </mat-card-header>
