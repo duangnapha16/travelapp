@@ -3,7 +3,7 @@
   max-width: 500px;
   width: 100%;
   margin-left: 400px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .example-full-width {
@@ -61,4 +61,11 @@ agm-map {
 }
  .mat-form-field-underline {
     background-color: #f8f9fa;
+}
+h1 {
+  background: #f8f9fa91;
+  margin-top: 20px;
+  text-align: center;
+  color: aliceblue;
+  padding: 20px;
 }
