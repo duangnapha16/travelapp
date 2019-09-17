@@ -31,14 +31,15 @@ export class SearchProvincesComponent implements OnInit {
   longitude: number;
   zoom: number;
   address: string;
+  hideMap = true;
   private geoCoder;
   @ViewChild('search', { static: false })
   public searchElementRef: ElementRef;
   constructor(private http: HttpClient,
-              private service: SearchProvincesService,
-              private attraction: AttractionsService,
-              private mapsAPILoader: MapsAPILoader,
-              private ngZone: NgZone) {
+    private service: SearchProvincesService,
+    private attraction: AttractionsService,
+    private mapsAPILoader: MapsAPILoader,
+    private ngZone: NgZone) {
   }
 
   // ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
@@ -46,44 +47,45 @@ export class SearchProvincesComponent implements OnInit {
   // }
 
   ngOnInit() {
+    this.zoom = 8;
     this.service.getState().subscribe(data => {
       console.log(data);
       this.states = data;
       this.trackStateCtrl();
     });
 
-    this.service.getCoordinates().subscribe(data => {
-      console.log('data2', data);
-      this.states2 = data;
+    // this.service.getCoordinates().subscribe(data => {
+    //   console.log('data2', data);
+    //   this.states2 = data;
 
-    });
+    // });
 
     // map
-    this.mapsAPILoader.load().then(() => {
-      this.setCurrentLocation();
-      // tslint:disable-next-line: new-parens
-      this.geoCoder = new google.maps.Geocoder;
-      // const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-      //   types: ['address']
-      // });
-      // autocomplete.addListener('place_changed', () => {
-      //   this.ngZone.run(() => {
-      //     // get the place result
-      //     const place: google.maps.places.PlaceResult = autocomplete.getPlace();
+    // this.mapsAPILoader.load().then(() => {
+    //   this.setCurrentLocation();
+  
+    //   this.geoCoder = new google.maps.Geocoder;
+    //   const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+    //     types: ['address']
+    //   });
+    //   autocomplete.addListener('place_changed', () => {
+    //     this.ngZone.run(() => {
+    //       // get the place result
+    //       const place: google.maps.places.PlaceResult = autocomplete.getPlace();
 
-      //     // verify result
-      //     if (place.geometry === undefined || place.geometry === null) {
-      //       return;
-      //     }
+    //       // verify result
+    //       if (place.geometry === undefined || place.geometry === null) {
+    //         return;
+    //       }
 
-      //     // set latitude, longitude and zoom
-      //     this.latitude = place.geometry.location.lat();
-      //     this.longitude = place.geometry.location.lng();
-      //     this.zoom = 12;
-      //   });
-      // });
+    //       // set latitude, longitude and zoom
+    //       this.latitude = place.geometry.location.lat();
+    //       this.longitude = place.geometry.location.lng();
+    //       this.zoom = 12;
+    //     });
+    //   });
 
-    });
+    // });
 
 
   }
@@ -104,6 +106,7 @@ export class SearchProvincesComponent implements OnInit {
   }
 
   onClickSearchButton() {
+    this.hideMap = false;
     const params = {
       name: this.stateCtrl.value,
     };
@@ -115,38 +118,38 @@ export class SearchProvincesComponent implements OnInit {
 
   }
   // map
-  private setCurrentLocation() {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.zoom = 15;
-      });
-    }
-  }
+  // private setCurrentLocation() {
+  //   if ('geolocation' in navigator) {
+  //     navigator.geolocation.getCurrentPosition((position) => {
+  //       this.latitude = position.coords.latitude;
+  //       this.longitude = position.coords.longitude;
+  //       this.zoom = 15;
+  //     });
+  //   }
+  // }
 
-  markerDragEnd($event: MouseEvent) {
-    console.log('$event', $event);
-    this.latitude = $event.coords.lat;
-    this.longitude = $event.coords.lng;
-    this.getAddress(this.latitude, this.longitude);
-  }
+  // markerDragEnd($event: MouseEvent) {
+  //   console.log('$event', $event);
+  //   this.latitude = $event.coords.lat;
+  //   this.longitude = $event.coords.lng;
+  //   this.getAddress(this.latitude, this.longitude);
+  // }
 
 
-  getAddress(latitude, longitude) {
-    this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
-      console.log('results', results);
-      console.log('status)', status);
-      if (status === 'OK') {
-        if (results[0]) {
-          this.zoom = 12;
-          this.address = results[0].formatted_address;
-        } else {
-          window.alert('No results found');
-        }
-      } else {
-        window.alert('Geocoder failed due to: ' + status);
-      }
-    });
-  }
+  // getAddress(latitude, longitude) {
+  //   this.geoCoder.geocode({ location: { lat: latitude, lng: longitude } }, (results, status) => {
+  //     console.log('results', results);
+  //     console.log('status)', status);
+  //     if (status === 'OK') {
+  //       if (results[0]) {
+  //         this.zoom = 12;
+  //         this.address = results[0].formatted_address;
+  //       } else {
+  //         window.alert('No results found');
+  //       }
+  //     } else {
+  //       window.alert('Geocoder failed due to: ' + status);
+  //     }
+  //   });
+  // }
 }
