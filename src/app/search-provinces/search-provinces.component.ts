@@ -41,10 +41,6 @@ export class SearchProvincesComponent implements OnInit {
               private ngZone: NgZone) {
   }
 
-  // ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-  //   console.log(this.stateCtrl.value);
-  // }
-
   ngOnInit() {
     this.zoom = 8;
     this.service.getState().subscribe(data => {
@@ -52,10 +48,6 @@ export class SearchProvincesComponent implements OnInit {
       this.states = data;
       this.trackStateCtrl();
     });
-
-
-
-
   }
 
   private trackStateCtrl() {
@@ -64,7 +56,6 @@ export class SearchProvincesComponent implements OnInit {
         startWith(''),
         map(state => state ? this._filterStates(state) : this.states.slice())
       );
-
   }
 
   private _filterStates(value: string): State[] {
@@ -78,16 +69,8 @@ export class SearchProvincesComponent implements OnInit {
     const params = {
       name: this.stateCtrl.value,
     };
-    console.log(params);
     this.attraction.getCoordinates(params).subscribe(data => {
-      console.log(data);
-      this.attractionList = data;
+    this.attractionList = data;
     });
-
   }
-
-  onClickTitle() {
-    this.hideMap = false;
-  }
-
 }
